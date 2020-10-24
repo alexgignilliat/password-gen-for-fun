@@ -16,47 +16,37 @@ let specialChar = "[]-=,./';!@%#^$&*()";
 $("#uppercase").click(function () {
   if (uppercaseClicked === false) {
     uppercaseClicked = true;
-
-    console.log(uppercaseClicked);
   } else if (uppercaseClicked === true) {
     uppercaseClicked = false;
-    console.log(uppercaseClicked);
   }
 });
 
 $("#lowercase").click(function () {
   if (lowercaseClicked === false) {
     lowercaseClicked = true;
-    console.log(lowercaseClicked);
   } else if (lowercaseClicked === true) {
     lowercaseClicked = false;
-    console.log(lowercaseClicked);
   }
 });
 
 $("#numbers").click(function () {
   if (numberClicked === false) {
     numberClicked = true;
-    console.log(numberClicked);
   } else if (numberClicked === true) {
     numberClicked = false;
-    console.log(numberClicked);
   }
 });
 
 $("#special").click(function () {
   if (specialClicked === false) {
     specialClicked = true;
-    console.log(specialClicked);
   } else if (specialClicked === true) {
     specialClicked = false;
-    console.log(specialClicked);
   }
 });
 
 $("#encrypted").click(function () {
   if (encryptedClicked === false) {
-    console.log(encryptedClicked);
     let confirmed = confirm(
       "SHA-256 encryption will generate a password based on the length you specify, then convert that to a 64-character hash. Do you want to continue?"
     );
@@ -68,7 +58,6 @@ $("#encrypted").click(function () {
     }
   } else if (encryptedClicked === true) {
     encryptedClicked = false;
-    console.log(encryptedClicked);
   }
 });
 
@@ -85,10 +74,7 @@ $("#generate").click(function () {
       "Password length must be between 5 and 999 characters. Must have at least one character type selected."
     );
   } else {
-    console.log(length.val());
-
     let passwordArr = [];
-
     let joinedArr = passwordArr.join("");
     let shuffledArr = [];
     let finalPass;
@@ -113,13 +99,7 @@ $("#generate").click(function () {
         passwordArr.push(specialChar[randomIndex]);
       }
 
-      console.log("randomindex", randomIndex);
-      console.log(passwordArr);
       shuffledArr = passwordArr.sort(() => Math.random() - 0.5);
-
-      // let shuffledIndex = Math.floor(Math.random() * passwordArr.length);
-      // shuffledArr.push(passwordArr[randomIndex]);
-      // console.log("pwarr", shuffledArr);
     }
     finalPass = shuffledArr.join("");
 
