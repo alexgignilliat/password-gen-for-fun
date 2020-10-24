@@ -1,7 +1,6 @@
+console.log("Praise the sun.");
 let button = document.getElementById("button");
-
 let length = $("#length");
-
 let uppercaseClicked = false;
 let lowercaseClicked = false;
 let numberClicked = false;
@@ -62,6 +61,7 @@ $("#encrypted").click(function () {
 });
 
 $("#generate").click(function () {
+  $(".copy").text("Copy to clipboard");
   if (
     length.val() < 5 ||
     length.val() > 999 ||
@@ -117,4 +117,5 @@ $("#generate").click(function () {
 $(".copy").click(function () {
   $("#textarea").select();
   document.execCommand("copy");
+  $(".copy").text("Copied!");
 });
