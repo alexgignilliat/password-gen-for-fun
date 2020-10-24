@@ -104,6 +104,7 @@ $("#generate").click(function () {
     finalPass = shuffledArr.join("");
 
     $(".copy").removeClass("hidden");
+    $("textarea").removeClass("hidden");
 
     if (encryptedClicked) {
       $("#textarea").text(`${sha256(finalPass)}`);
