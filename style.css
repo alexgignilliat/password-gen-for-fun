@@ -58,6 +58,7 @@ body {
 h2 {
   color: #313131;
   font-family: "Open Sans", sans-serif;
+  text-shadow: 1px 1px 0 rgb(119, 39, 129), 2px 2px 5px rgb(90, 90, 90);
 }
 
 .btnDiv {
