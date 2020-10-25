@@ -82,19 +82,21 @@ $("#generate").click(function () {
     let shuffledIndex;
 
     for (let i = 0; passwordArr.length < length.val(); i++) {
-      if (lowercaseClicked && passwordArr.length < length.val()) {
+      let checkLength = passwordArr.length < length.val();
+
+      if (lowercaseClicked && checkLength) {
         randomIndex = Math.floor(Math.random() * lowercaseChar.length);
         passwordArr.push(lowercaseChar[randomIndex]);
       }
-      if (uppercaseClicked && passwordArr.length < length.val()) {
+      if (uppercaseClicked && checkLength) {
         randomIndex = Math.floor(Math.random() * uppercaseChar.length);
         passwordArr.push(uppercaseChar[randomIndex]);
       }
-      if (numberClicked && passwordArr.length < length.val()) {
+      if (numberClicked && checkLength) {
         randomIndex = Math.floor(Math.random() * numberChar.length);
         passwordArr.push(numberChar[randomIndex]);
       }
-      if (specialClicked && passwordArr.length < length.val()) {
+      if (specialClicked && checkLength) {
         randomIndex = Math.floor(Math.random() * specialChar.length);
         passwordArr.push(specialChar[randomIndex]);
       }
